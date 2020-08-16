@@ -1,0 +1,13 @@
+{% extends 'user_hr/dashboard.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="content section">
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button class="btn btn-outline-info" type="submit"> Register </button>
+    </form>
+    <a href="{% url 'login' %}">Back to login</a>
+</div>
+{% endblock content %}
