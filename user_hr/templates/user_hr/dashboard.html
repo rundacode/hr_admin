@@ -151,13 +151,13 @@
 
               {% for employee in employees %}
                 {% if user == hr_company.company_user %}
-                <tr>
-                  <td>{{ employee.employe_id }}</td>
-                  <td>{{ employee.last }}</td>
-                  <td>{{ employee.first }}</td>
-                  <td>{{ employee.department }}</td>
-                  <td>{{ employee.company }}</td>
-                </tr>
+                  <tr>
+                    <td>{{ hr_company.company_user }}</td>
+                    <td>{{ employee.last }}</td>
+                    <td>{{ employee.first }}</td>
+                    <td>{{ employee.department }}</td>
+                    <td>{{ employee.company }}</td>
+                  </tr>
                 {% endif %}
               {% endfor %}
 
@@ -213,7 +213,7 @@
         }
       });
     </script>
-  
+
 {% endblock content %}
 
 </body></html>
